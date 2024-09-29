@@ -1,0 +1,7 @@
+from task1.models import Buyer, Game
+G=Game.objects
+B=Buyer.objects
+G.create(title='Just Cost 10', cost=1199.99, size=30.1, description='Долгожданная песочница со взрывами и не только!', age_limited=False)
+G.filter(cost=1399.99).update(cost=1399.99, )
+G.create(title='Super Igra', cost=99, size=26, description='', age_limited=False)
+G.get(id=5).delete()
